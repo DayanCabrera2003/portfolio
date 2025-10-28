@@ -1,20 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 .hero {
   position: relative;
   width: 100%;
   max-width: 100%;
-  height: 60vh; // altura por defecto
-  min-height: 0; // Cambiado para permitir colapso completo
+  height: 60vh;
+  min-height: 0;
   background: url('../../../assets/escritorio.jpg') no-repeat center center;
   background-size: cover;
-  background-attachment: fixed; // Efecto parallax opcional
-  transition: height 0.1s ease-out;
+  background-attachment: fixed;
+  transition: opacity 0.3s ease-out;
   z-index: 1;
   margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   
-  // Overlay opcional para mejorar legibilidad
   &::before {
     content: '';
     position: absolute;
@@ -22,7 +23,108 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
   }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10%;
+  }
+
+  .text-container {
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    @media (max-width: 768px) {
+      font-size: 28px;
+      padding-left: 20px;
+    }
+  }
+
+  .flip {
+    height: 76px;
+    overflow: hidden;
+
+    > div > div {
+      color: #fff;
+      padding: 6px 16px;
+      height: 54px;
+      margin-bottom: 54px;
+      display: inline-block;
+      border-radius: 8px;
+    }
+
+    div:first-child {
+      animation: show 10s linear infinite;
+    }
+
+    // QUALITY - Dorado/Oro (calidad premium)
+    div:nth-child(1) div {
+      background: linear-gradient(135deg, #f39c12 0%, #f1c40f 100%);
+      box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+    }
+
+    // SECURE - Verde (seguridad, confianza)
+    div:nth-child(2) div {
+      background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+      box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
+    }
+
+    // RELIABLE - Azul (confiabilidad, estabilidad)
+    div:nth-child(3) div {
+      background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    // EFFICIENT - Naranja (energía, eficiencia)
+    div:nth-child(4) div {
+      background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+      box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    }
+
+    // USABLE - Púrpura/Morado (creatividad, usabilidad)
+    div:nth-child(5) div {
+      background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+      box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+    }
+  }
+}
+
+@keyframes show {
+  /* 1. QUALITY (0px) - Visible del 0% al 16% */
+  0% { margin-top: 0px; }
+  16% { margin-top: 0px; }
+  
+  /* 2. SECURE (-108px) - Salto al 20%, Visible hasta el 36% */
+  20% { margin-top: -108px; }
+  36% { margin-top: -108px; }
+  
+  /* 3. RELIABLE (-216px) - Salto al 40%, Visible hasta el 56% */
+  40% { margin-top: -216px; }
+  56% { margin-top: -216px; }
+
+  /* 4. EFFICIENT (-324px) - Salto al 60%, Visible hasta el 76% */
+  60% { margin-top: -324px; }
+  76% { margin-top: -324px; }
+  
+  /* 5. USABLE (-432px) - Salto al 80%, Visible hasta el 96% */
+  80% { margin-top: -432px; }
+  96% { margin-top: -432px; }
+
+  /* REINICIO INSTANTÁNEO - Salto inmediato sin transición */
+  96.01% { margin-top: 0px; }
+  100% { margin-top: 0px; }
 }
