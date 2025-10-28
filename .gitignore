@@ -1,0 +1,43 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+portfolio/dist
+portfolio/tmp
+portfolio/out-tsc
+portfolio/bazel-out
+
+# Node
+portfolio/node_modules
+portfolio/npm-debug.log
+portfolio/yarn-error.log
+
+# IDEs and editors
+portfolio/.idea/
+portfolio/.project
+portfolio/.classpath
+portfolio/.c9/
+portfolio/*.launch
+portfolio/.settings/
+portfolio/*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+portfolio/.angular/cache
+portfolio/.sass-cache/
+portfolio/connect.lock
+portfolio/coverage
+portfolio/libpeerconnection.log
+portfolio/testem.log
+portfolio/typings
+portfolio/__screenshots__/
+
+# System files
+.DS_Store
+Thumbs.db
