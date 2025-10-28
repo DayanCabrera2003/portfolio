@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.navbar {
+  width: 100%; // Cambiado de 100vw a 100%
+  min-width: 0;
+  max-width: 100%; // Cambiado de 100vw a 100%
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.35);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: padding 0.2s, width 0.2s;
+  border-radius: 0;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.navbar-icons a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+  opacity: 0.85;
+}
+
+.navbar-icons a:hover {
+  opacity: 1;
+}
+
+.navbar-icons svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  display: block;
+  transition: width 0.2s, height 0.2s;
+}
+
+.navbar-title {
+  color: #fff;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #000a;
+  user-select: none;
+  transition: font-size 0.2s;
+}
+
+// Tablet
+@media (max-width: 900px) {
+  .navbar {
+    padding: 8px 10px;
+    border-radius: 0 0 14px 0;
+  }
+  .navbar-title {
+    font-size: 0.95rem;
+  }
+  .navbar-icons svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+// Móvil
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 6px 4px;
+    border-radius: 0 0 10px 0;
+  }
+  .navbar-title {
+    font-size: 0.85rem;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+  .navbar-icons {
+    gap: 8px;
+  }
+  .navbar-icons svg {
+    width: 13px;
+    height: 13px;
+  }
+}

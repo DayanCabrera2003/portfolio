@@ -1,0 +1,28 @@
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 60vh; // altura por defecto
+  min-height: 0; // Cambiado para permitir colapso completo
+  background: url('../../../assets/escritorio.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; // Efecto parallax opcional
+  transition: height 0.1s ease-out;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  
+  // Overlay opcional para mejorar legibilidad
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+}
