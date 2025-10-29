@@ -6,18 +6,19 @@
   top: 48px; /* Altura de la navbar horizontal */
   left: 0;
   height: calc(100vh - 48px);
-  width: 60px;
+  width: 45px;
   background: rgba(0,0,0,0.35);
   color: #fff;
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
   z-index: 99;
   overflow: hidden;
-  border-radius: 0 0 14px 0;
-  box-shadow: 2px 0 12px #0003;
+  border-radius: 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
   font-family: 'Roboto', sans-serif;
   border-top: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
   &:hover, &.expanded {
-    width: 180px;
+    width: 170px;
   }
   ul {
     list-style: none;
@@ -32,23 +33,24 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-      padding: 12px 8px 12px 12px;
+      padding: 10px 6px 10px 8px;
       transition: background 0.2s;
-      border-radius: 0 12px 12px 0;
+      border-radius: 0;
       opacity: 0.85;
       &:hover {
-        background: #222b;
+        background: rgba(34, 34, 34, 0.7);
         opacity: 1;
       }
       .icon {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
         svg {
-          width: 20px;
-          height: 20px;
+          width: 18px;
+          height: 18px;
           fill: #fff;
           display: block;
         }
@@ -63,5 +65,12 @@
         text-shadow: 0 2px 8px #000a;
       }
     }
+  }
+}
+
+// Tablet y Mobile - ocultar sidebar vertical
+@media (max-width: 768px) {
+  .side-navbar {
+    display: none;
   }
 }

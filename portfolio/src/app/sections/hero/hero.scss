@@ -47,11 +47,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
-    @media (max-width: 768px) {
-      font-size: 28px;
-      padding-left: 20px;
-    }
   }
 
   .flip {
@@ -127,4 +122,109 @@
   /* REINICIO INSTANTÁNEO - Salto inmediato sin transición */
   96.01% { margin-top: 0px; }
   100% { margin-top: 0px; }
+}
+
+// Responsive Design
+@media (max-width: 992px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .hero .text-container {
+    font-size: 36px;
+    padding-left: 5%;
+  }
+
+  .hero .flip {
+    height: 60px;
+  }
+
+  .hero .flip > div > div {
+    height: 42px;
+    margin-bottom: 42px;
+    padding: 4px 12px;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+    background-attachment: scroll;
+  }
+
+  .hero .hero-content {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .hero .text-container {
+    font-size: 28px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero .flip {
+    height: 48px;
+  }
+
+  .hero .flip > div > div {
+    height: 36px;
+    margin-bottom: 36px;
+    padding: 4px 12px;
+    font-size: 28px;
+  }
+
+  @keyframes show {
+    0% { margin-top: 0px; }
+    16% { margin-top: 0px; }
+    20% { margin-top: -72px; }
+    36% { margin-top: -72px; }
+    40% { margin-top: -144px; }
+    56% { margin-top: -144px; }
+    60% { margin-top: -216px; }
+    76% { margin-top: -216px; }
+    80% { margin-top: -288px; }
+    96% { margin-top: -288px; }
+    96.01% { margin-top: 0px; }
+    100% { margin-top: 0px; }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    height: 35vh;
+  }
+
+  .hero .text-container {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .hero .flip {
+    height: 36px;
+  }
+
+  .hero .flip > div > div {
+    height: 28px;
+    margin-bottom: 28px;
+    padding: 2px 10px;
+    font-size: 20px;
+    border-radius: 6px;
+  }
+
+  @keyframes show {
+    0% { margin-top: 0px; }
+    16% { margin-top: 0px; }
+    20% { margin-top: -56px; }
+    36% { margin-top: -56px; }
+    40% { margin-top: -112px; }
+    56% { margin-top: -112px; }
+    60% { margin-top: -168px; }
+    76% { margin-top: -168px; }
+    80% { margin-top: -224px; }
+    96% { margin-top: -224px; }
+    96.01% { margin-top: 0px; }
+    100% { margin-top: 0px; }
+  }
 }
