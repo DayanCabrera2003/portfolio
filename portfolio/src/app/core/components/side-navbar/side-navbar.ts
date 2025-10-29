@@ -20,7 +20,9 @@ export class SideNavbarComponent {
   scrollToSection(section: string) {
     const el = document.getElementById(section);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      const yOffset = -60; // Offset para el navbar (ajusta según tu navbar height)
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
 }
