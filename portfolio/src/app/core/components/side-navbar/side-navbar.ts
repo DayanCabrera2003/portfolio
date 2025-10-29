@@ -12,9 +12,8 @@ export class SideNavbarComponent {
   expanded = false;
   navItems = [
     { icon: '👤', label: 'About', section: 'about' },
-    { icon: '📞', label: 'Contact', section: 'contact' },
-    { icon: '📄', label: 'Resume', section: 'resume' },
-    { icon: '️', label: 'Services', section: 'services' }
+    { icon: '', label: 'Resume', section: 'resume' },
+    { icon: '🛠️', label: 'Services', section: 'services' }
   ];
 
   scrollToSection(section: string) {
