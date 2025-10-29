@@ -1,0 +1,466 @@
+.resume-section {
+    background: #F3EDD7;
+    min-height: 60vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 40px 60px 40px;
+}
+
+.resume-main-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    max-width: 1400px;
+    padding-left: 800px;
+}
+
+.resume-main-title i {
+    color: #8B7355;
+    font-size: 52px;
+}
+
+.lottie-icon {
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.resume-column {
+    flex: 1;
+    padding: 30px;
+}
+
+.column-divider {
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(216, 203, 167, 0.5) 10%, rgba(216, 203, 167, 0.5) 90%, transparent);
+    min-height: 600px;
+    flex-shrink: 0;
+}
+
+.column-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid rgba(216, 203, 167, 0.5);
+}
+
+.column-title i {
+    color: #8B7355;
+    font-size: 28px;
+}
+
+/* EDUCACIÓN - Timeline */
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: #8B7355;
+    border-radius: 50%;
+    border: 3px solid #F3EDD7;
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.3);
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 3px solid #8B7355;
+}
+
+.institution {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.department {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+
+.degree {
+    font-size: 17px;
+    font-weight: 600;
+    color: #8B7355;
+    margin-bottom: 10px;
+}
+
+.period {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.period i {
+    color: #8B7355;
+}
+
+/* PROYECTOS */
+.project-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid #8B7355;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.2);
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project-title i {
+    color: #8B7355;
+    font-size: 20px;
+}
+
+.project-tech {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.project-tech i {
+    color: #8B7355;
+}
+
+.project-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-highlights li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.project-highlights li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #8B7355;
+    font-weight: bold;
+}
+
+/* HABILIDADES */
+.skills-category {
+    margin-bottom: 25px;
+}
+
+.skills-subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skills-subtitle i {
+    color: #8B7355;
+    font-size: 18px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(139, 115, 85, 0.3);
+}
+
+.competencies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.competencies-list li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.competencies-list li i {
+    color: #8B7355;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.language-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    border-left: 3px solid #8B7355;
+}
+
+.language-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.language-level {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+// Tablet
+@media (max-width: 992px) {
+    .resume-section {
+        padding: 30px 30px 50px 30px;
+    }
+
+    .resume-main-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+    }
+
+    .resume-main-title i {
+        font-size: 40px;
+    }
+
+    .lottie-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .resume-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .column-divider {
+        width: 100%;
+        height: 1px;
+        min-height: 1px;
+        background: linear-gradient(to right, transparent, rgba(216, 203, 167, 0.5) 20%, rgba(216, 203, 167, 0.5) 80%, transparent);
+    }
+
+    .resume-column {
+        padding: 20px 10px;
+    }
+
+    .column-title {
+        font-size: 22px;
+    }
+}
+
+// Mobile
+@media (max-width: 576px) {
+    .resume-section {
+        padding: 30px 20px 40px 20px;
+    }
+
+    .resume-main-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+        gap: 12px;
+        letter-spacing: 1px;
+        padding-left: 10px;
+    }
+
+    .resume-main-title i {
+        font-size: 32px;
+    }
+
+    .lottie-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .resume-content {
+        gap: 20px;
+    }
+
+    .resume-column {
+        padding: 15px 5px;
+    }
+
+    .column-title {
+        font-size: 20px;
+        gap: 10px;
+    }
+
+    .column-title i {
+        font-size: 24px;
+    }
+
+    .timeline-item {
+        padding-left: 25px;
+    }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-content {
+        padding: 15px;
+    }
+
+    .institution {
+        font-size: 18px;
+    }
+
+    .department {
+        font-size: 14px;
+    }
+
+    .degree {
+        font-size: 15px;
+    }
+
+    .period {
+        font-size: 13px;
+    }
+
+    .project-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .project-title {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .project-title i {
+        font-size: 18px;
+    }
+
+    .project-tech {
+        font-size: 12px;
+    }
+
+    .project-highlights li {
+        font-size: 13px;
+    }
+
+    .skills-subtitle {
+        font-size: 15px;
+        gap: 6px;
+    }
+
+    .skills-subtitle i {
+        font-size: 16px;
+    }
+
+    .skill-tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .competencies-list li {
+        font-size: 13px;
+    }
+
+    .language-item {
+        padding: 8px 12px;
+    }
+
+    .language-name {
+        font-size: 14px;
+    }
+
+    .language-level {
+        font-size: 12px;
+    }
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import lottie from 'lottie-web';
 
 @Component({
   selector: 'app-resume',
@@ -6,6 +7,18 @@ import { Component } from '@angular/core';
   templateUrl: './resume.html',
   styleUrls: ['./resume.scss'],
 })
-export class ResumeComponent {
+export class ResumeComponent implements AfterViewInit {
 
+  ngAfterViewInit(): void {
+    const container = document.getElementById('resume-lottie');
+    if (container) {
+      lottie.loadAnimation({
+        container: container,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/assets/Business resume.json'
+      });
+    }
+  }
 }
