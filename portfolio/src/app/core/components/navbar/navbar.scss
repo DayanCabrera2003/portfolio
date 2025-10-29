@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 .navbar {
   width: 100%; // Cambiado de 100vw a 100%
@@ -45,6 +46,21 @@
   transition: width 0.2s, height 0.2s;
 }
 
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #000a;
+  user-select: none;
+  transition: font-size 0.2s;
+}
+
 .navbar-title {
   color: #fff;
   font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
@@ -61,6 +77,9 @@
   .navbar {
     padding: 8px 10px;
     border-radius: 0 0 14px 0;
+  }
+  .navbar-center {
+    font-size: 0.95rem;
   }
   .navbar-title {
     font-size: 0.95rem;
@@ -79,6 +98,12 @@
     gap: 6px;
     padding: 6px 4px;
     border-radius: 0 0 10px 0;
+  }
+  .navbar-center {
+    position: static;
+    transform: none;
+    font-size: 0.8rem;
+    margin-left: 4px;
   }
   .navbar-title {
     font-size: 0.85rem;
