@@ -14,8 +14,7 @@ export class SideNavbarComponent {
     { icon: '👤', label: 'About', section: 'about' },
     { icon: '📞', label: 'Contact', section: 'contact' },
     { icon: '📄', label: 'Resume', section: 'resume' },
-    { icon: '💼', label: 'Portfolio', section: 'portfolio' },
-    { icon: '🛠️', label: 'Services', section: 'services' }
+    { icon: '️', label: 'Services', section: 'services' }
   ];
 
   scrollToSection(section: string) {

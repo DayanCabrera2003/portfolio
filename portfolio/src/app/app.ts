@@ -6,7 +6,6 @@ import { HeroComponent } from './sections/hero/hero';
 import { AboutComponent } from './sections/about/about';
 import { ResumeComponent } from './sections/resume/resume';
 import { ServicesComponent } from './sections/services/services';
-import { PortfolioComponent } from './sections/portfolio/portfolio';
 import { ContactComponent } from './sections/contact/contact';
 
 @Component({
@@ -20,7 +19,6 @@ import { ContactComponent } from './sections/contact/contact';
     AboutComponent,
     ResumeComponent,
     ServicesComponent,
-    PortfolioComponent,
     ContactComponent
   ],
   templateUrl: './app.html',
