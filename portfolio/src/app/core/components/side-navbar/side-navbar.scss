@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.side-navbar {
+  position: fixed;
+  top: 48px; /* Altura de la navbar horizontal */
+  left: 0;
+  height: calc(100vh - 48px);
+  width: 60px;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 99;
+  overflow: hidden;
+  border-radius: 0 0 14px 0;
+  box-shadow: 2px 0 12px #0003;
+  font-family: 'Roboto', sans-serif;
+  border-top: none;
+  &:hover, &.expanded {
+    width: 180px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 2px;
+    li {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 12px 8px 12px 12px;
+      transition: background 0.2s;
+      border-radius: 0 12px 12px 0;
+      opacity: 0.85;
+      &:hover {
+        background: #222b;
+        opacity: 1;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: #fff;
+          display: block;
+        }
+      }
+      .label {
+        margin-left: 14px;
+        font-size: 0.92rem;
+        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        text-shadow: 0 2px 8px #000a;
+      }
+    }
+  }
+}
