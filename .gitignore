@@ -1,26 +1,33 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
-# Compiled output
-portfolio/dist
-portfolio/tmp
-portfolio/out-tsc
-portfolio/bazel-out
+# --- Compiled output ---
+/dist
+/tmp
+/out-tsc
+/bazel-out
 
-# Node
-portfolio/node_modules
-portfolio/npm-debug.log
-portfolio/yarn-error.log
+# --- Node ---
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
 
-# IDEs and editors
-portfolio/.idea/
-portfolio/.project
-portfolio/.classpath
-portfolio/.c9/
-portfolio/*.launch
-portfolio/.settings/
-portfolio/*.sublime-workspace
+# --- IDEs and editors ---
+# JetBrains
+/.idea/
 
-# Visual Studio Code
+# Eclipse
+/.project
+/.classpath
+
+# Cloud9
+/.c9/
+
+# Sublime
+/*.sublime-workspace
+
+# Visual Studio Code (keep workspace settings under source control)
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -28,17 +35,46 @@ portfolio/*.sublime-workspace
 !.vscode/extensions.json
 .history/*
 
-# Miscellaneous
-portfolio/.angular/cache
-portfolio/.sass-cache/
-portfolio/connect.lock
-portfolio/coverage
-portfolio/libpeerconnection.log
-portfolio/testem.log
-portfolio/typings
-portfolio/__screenshots__/
+# --- Angular / build artifacts ---
+/.angular
+/.angular/cache
+.angular/
+
+# Sass
+/.sass-cache/
+
+# Coverage
+/coverage
+
+# Misc
+connect.lock
+libpeerconnection.log
+testem.log
+typings
+__screenshots__/
 
 # System files
 .DS_Store
 Thumbs.db
-/portfolio/DEPLOYMENT_SEO_GUIDE.md
+
+# Dist folder for other builds (if you have multiple projects)
+/dist/**
+
+# Browser cache
+.cache/
+
+# Environment files (uncomment if needed)
+# .env
+# .env.local
+# .env.*.local
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
