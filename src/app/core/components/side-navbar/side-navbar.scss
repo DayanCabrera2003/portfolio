@@ -1,7 +1,4 @@
 @use '../../constants/layout' as *;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-
 .side-navbar {
   position: fixed;
   top: $navbar-height;
@@ -15,7 +12,7 @@
   overflow: hidden;
   border-radius: 0;
   box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
   border-top: none;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   &:hover, &.expanded {
@@ -63,7 +60,7 @@
       .label {
         margin-left: 14px;
         font-size: 0.92rem;
-        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        font-family: 'Inter', sans-serif;
         font-weight: 600;
         letter-spacing: 0.5px;
         white-space: nowrap;
