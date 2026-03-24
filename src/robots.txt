@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
+Disallow: /assets/Dayan_Cabrera_Corvo_CV.pdf
 
 Sitemap: https://dayancabrera2003.github.io/portfolio/sitemap.xml
