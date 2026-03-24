@@ -70,7 +70,6 @@
     border: 2px solid transparent;
     border-left: 3px solid #8B7355;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    will-change: transform, box-shadow;
 
     &::before {
         content: '';
@@ -133,7 +132,6 @@
     margin-bottom: 25px;
     border: 2px solid rgba(139, 115, 85, 0.12);
     transition: transform 0.4s ease, background 0.4s ease, border-color 0.4s ease;
-    will-change: transform;
 }
 
 .service-icon i {
@@ -275,6 +273,7 @@
         font-size: 14px;
         line-height: 1.6;
         margin-bottom: 20px;
+        text-align: left;
     }
 
     .tech-badge {
