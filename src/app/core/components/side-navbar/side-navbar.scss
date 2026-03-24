@@ -30,16 +30,20 @@
     justify-content: center;
     gap: 2px;
     li {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      padding: 10px 6px 10px 8px;
-      transition: background 0.2s;
-      border-radius: 0;
-      opacity: 0.85;
-      &:hover {
-        background: rgba(34, 34, 34, 0.7);
-        opacity: 1;
+      a {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 6px 10px 8px;
+        transition: background 0.2s;
+        border-radius: 0;
+        opacity: 0.85;
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          background: rgba(34, 34, 34, 0.7);
+          opacity: 1;
+        }
       }
       .icon {
         width: 18px;

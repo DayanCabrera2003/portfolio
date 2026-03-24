@@ -16,10 +16,11 @@ export class SideNavbarComponent {
     { icon: '🛠️', label: 'Services', section: 'services' }
   ];
 
-  scrollToSection(section: string) {
+  scrollToSection(section: string, event: Event) {
+    event.preventDefault();
     const el = document.getElementById(section);
     if (el) {
-      const yOffset = -60; // Offset para el navbar (ajusta según tu navbar height)
+      const yOffset = -60;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
