@@ -1,0 +1,17 @@
+{
+  "name": "Dayan Cabrera Corvo - Portfolio",
+  "short_name": "Dayan Portfolio",
+  "description": "Portafolio profesional de Dayan Cabrera Corvo, desarrollador Full-Stack cubano",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#F3EDD7",
+  "theme_color": "#8B7355",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
