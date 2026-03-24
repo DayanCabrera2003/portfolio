@@ -1,12 +1,13 @@
+@use '../../constants/layout' as *;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 .side-navbar {
   position: fixed;
-  top: 48px; /* Altura de la navbar horizontal */
+  top: $navbar-height;
   left: 0;
-  height: calc(100vh - 48px);
-  width: 45px;
+  height: calc(100vh - $navbar-height);
+  width: $sidebar-width;
   background: rgba(0,0,0,0.35);
   color: #fff;
   transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -18,7 +19,7 @@
   border-top: none;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   &:hover, &.expanded {
-    width: 170px;
+    width: $sidebar-expanded-width;
   }
   ul {
     list-style: none;

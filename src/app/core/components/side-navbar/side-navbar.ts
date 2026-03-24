@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SCROLL_OFFSET } from '../../constants/layout';
 
 @Component({
   selector: 'app-side-navbar',
@@ -20,7 +21,7 @@ export class SideNavbarComponent {
     event.preventDefault();
     const el = document.getElementById(section);
     if (el) {
-      const yOffset = -60;
+      const yOffset = SCROLL_OFFSET;
       const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
