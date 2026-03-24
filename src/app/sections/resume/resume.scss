@@ -51,6 +51,10 @@
 .resume-column {
     flex: 1;
     padding: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    border: 1px solid rgba(216, 203, 167, 0.2);
 }
 
 .column-divider {
@@ -140,17 +144,20 @@
 
 /* PROYECTOS */
 .project-item {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border-left: 3px solid #8B7355;
+    border: 1px solid rgba(216, 203, 167, 0.3);
     border-left: 3px solid #8B7355;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.18);
 }
 
 .project-title {
@@ -235,11 +242,11 @@
 
 .skill-tag {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 8px 16px;
     background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
     color: white;
-    border-radius: 5px;
-    font-size: 13px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: default;
