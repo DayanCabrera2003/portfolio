@@ -2,9 +2,12 @@ import { Component, AfterViewInit, OnDestroy, PLATFORM_ID, inject } from '@angul
 import { isPlatformBrowser } from '@angular/common';
 import type { AnimationItem } from 'lottie-web';
 
+import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.directive';
+
 @Component({
   selector: 'app-resume',
   standalone: true,
+  imports: [ScrollRevealDirective],
   templateUrl: './resume.html',
   styleUrls: ['./resume.scss'],
 })

@@ -7,7 +7,7 @@
 	
 	<div class="about-content">
 		<!-- Columna Izquierda: Who Am I? -->
-		<div class="about-column">
+		<div class="about-column" appScrollReveal>
 			<h2 class="column-title">
 				<i class="fas fa-user-circle"></i>
 				Who Am I?
@@ -25,7 +25,7 @@
 		<div class="column-divider"></div>
 
 		<!-- Columna Central: Personal Details -->
-		<div class="about-column">
+		<div class="about-column" appScrollReveal [revealDelay]="150">
 			<h2 class="column-title">
 				<i class="fas fa-id-card"></i>
 				Personal Details
@@ -62,7 +62,7 @@
 		<div class="column-divider"></div>
 
 		<!-- Columna Derecha: Key Expertise -->
-		<div class="about-column">
+		<div class="about-column" appScrollReveal [revealDelay]="300">
 			<h2 class="column-title">
 				<i class="fas fa-code"></i>
 				Key Expertise
