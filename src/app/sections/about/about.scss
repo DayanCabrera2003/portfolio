@@ -55,6 +55,16 @@
 .about-column {
     flex: 1;
     padding: 30px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    border: 1px solid rgba(216, 203, 167, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
 }
 
 .column-divider {
@@ -178,8 +188,14 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 15px 0;
+    padding: 15px 10px;
     border-bottom: 1px solid rgba(216, 203, 167, 0.3);
+    border-radius: 6px;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: rgba(139, 115, 85, 0.06);
+    }
 }
 
 .details-list li i {
