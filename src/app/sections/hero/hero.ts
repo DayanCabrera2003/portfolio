@@ -17,8 +17,7 @@ export class HeroComponent {
     const fadeDistance = 300;
     
     this.heroOpacity = Math.max(0, 1 - (scrollPosition / fadeDistance));
-    
-    // Debug: descomentar para ver si funciona
-    console.log('Scroll:', scrollPosition, 'Opacity:', this.heroOpacity);
+
+
   }
 }
