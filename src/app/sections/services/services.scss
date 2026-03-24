@@ -104,16 +104,35 @@
     }
 }
 
+.service-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 64px;
+    font-weight: 800;
+    color: rgba(139, 115, 85, 0.08);
+    line-height: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    pointer-events: none;
+    user-select: none;
+    transition: color 0.4s ease;
+}
+
+.service-card:hover .service-number {
+    color: rgba(139, 115, 85, 0.15);
+}
+
 .service-icon {
     width: 80px;
     height: 80px;
-    background: rgba(139, 115, 85, 0.1);
+    background: rgba(139, 115, 85, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
-    transition: transform 0.4s ease, background 0.4s ease;
+    border: 2px solid rgba(139, 115, 85, 0.12);
+    transition: transform 0.4s ease, background 0.4s ease, border-color 0.4s ease;
     will-change: transform;
 }
 
@@ -229,6 +248,12 @@
     .service-card {
         padding: 25px 20px;
         border-radius: 12px;
+    }
+
+    .service-number {
+        font-size: 48px;
+        top: 10px;
+        right: 15px;
     }
 
     .service-icon {
