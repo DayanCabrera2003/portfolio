@@ -31,6 +31,13 @@
     color: #8B7355;
     font-size: 52px;
     animation: rotate 4s linear infinite;
+    will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-main-title i {
+        animation: none;
+    }
 }
 
 @keyframes rotate {
