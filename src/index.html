@@ -46,46 +46,122 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Structured Data (JSON-LD) for SEO -->
+  <!-- Structured Data: Person + ProfilePage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dayan Cabrera Corvo",
-    "jobTitle": "Full-Stack Developer",
-    "description": "Estudiante avanzado de Ciencias de la Computación y Programador cubano especializado en Angular, Python, C# y Rust",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://dayancabrera2003.github.io/portfolio/#person",
+      "name": "Dayan Cabrera Corvo",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Estudiante avanzado de Ciencias de la Computación y Programador cubano especializado en Angular, Python, C# y Rust",
+      "url": "https://dayancabrera2003.github.io/portfolio/",
+      "image": "https://dayancabrera2003.github.io/portfolio/assets/Dayan.webp",
+      "email": "dayancorvo@gmail.com",
+      "telephone": "+53-55801450",
+      "nationality": "Cuban",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "La Habana",
+        "addressCountry": "CU"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Universidad de La Habana",
+        "department": "Facultad de Matemática y Computación"
+      },
+      "knowsAbout": [
+        "Angular", "Python", "C#", "Rust", "TypeScript", "JavaScript",
+        "FastAPI", "SQL Server", "PostgreSQL",
+        "Arquitectura de Software", "Full-Stack Development",
+        "Backend Development", "Frontend Development",
+        "NLP", "Machine Learning", "Docker"
+      ],
+      "knowsLanguage": [
+        { "@type": "Language", "name": "Español", "alternateName": "es" },
+        { "@type": "Language", "name": "English", "alternateName": "en" }
+      ],
+      "sameAs": [
+        "https://github.com/DayanCabrera2003",
+        "https://www.linkedin.com/in/dayan-cabrera-corvo"
+      ]
+    },
+    "dateCreated": "2025-10-01",
+    "dateModified": "2026-03-24"
+  }
+  </script>
+
+  <!-- Structured Data: WebSite (enables sitelinks in search results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Dayan Cabrera Corvo - Portfolio",
     "url": "https://dayancabrera2003.github.io/portfolio/",
-    "image": "https://dayancabrera2003.github.io/portfolio/assets/Dayan.webp",
-    "email": "dayancorvo@gmail.com",
-    "telephone": "+53-55801450",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "La Habana",
-      "addressCountry": "CU"
-    },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Universidad de La Habana",
-      "department": "Facultad de Matemática y Computación"
-    },
-    "knowsAbout": [
-      "Angular",
-      "Python",
-      "C#",
-      "Rust",
-      "TypeScript",
-      "JavaScript",
-      "FastAPI",
-      "SQL Server",
-      "PostgreSQL",
-      "Arquitectura de Software",
-      "Full-Stack Development",
-      "Backend Development",
-      "Frontend Development"
-    ],
-    "sameAs": [
-      "https://github.com/DayanCabrera2003",
-      "https://www.linkedin.com/in/dayan-cabrera-corvo"
+    "description": "Portafolio profesional de Dayan Cabrera Corvo, desarrollador Full-Stack cubano",
+    "author": { "@id": "https://dayancabrera2003.github.io/portfolio/#person" },
+    "inLanguage": "es"
+  }
+  </script>
+
+  <!-- Structured Data: Projects as ItemList (rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Professional Projects",
+    "numberOfItems": 4,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Simulador Multiagente de Turismo en Cuba",
+          "description": "Sistema RAG con procesamiento NLP avanzado y motor de recomendación personalizada",
+          "applicationCategory": "Simulation",
+          "operatingSystem": "Cross-platform",
+          "author": { "@id": "https://dayancabrera2003.github.io/portfolio/#person" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Sistema de Gestión Escolar",
+          "description": "Plataforma web integral con módulos de profesores, aulas y generación automatizada de reportes PDF",
+          "applicationCategory": "Education",
+          "operatingSystem": "Web",
+          "author": { "@id": "https://dayancabrera2003.github.io/portfolio/#person" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Perspectiva Backend",
+          "description": "Plataforma de noticias con extracción vía RSS, API REST con categorización automática y NLP",
+          "applicationCategory": "News",
+          "operatingSystem": "Web",
+          "author": { "@id": "https://dayancabrera2003.github.io/portfolio/#person" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": "Compilador HULK",
+          "description": "Compilador completo con soporte orientado a objetos, árboles de sintaxis abstracta y detección de errores",
+          "applicationCategory": "DeveloperTool",
+          "operatingSystem": "Cross-platform",
+          "author": { "@id": "https://dayancabrera2003.github.io/portfolio/#person" }
+        }
+      }
     ]
   }
   </script>
