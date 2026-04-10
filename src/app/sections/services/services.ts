@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ScrollRevealDirective } from '../../core/directives/scroll-reveal.directive';
+import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [ScrollRevealDirective],
+  imports: [ScrollRevealDirective, TranslatePipe],
   templateUrl: './services.html',
   styleUrls: ['./services.scss'],
 })

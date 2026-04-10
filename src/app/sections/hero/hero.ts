@@ -1,11 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HERO_FADE_DISTANCE } from '../../core/constants/layout';
+import { TranslatePipe } from '../../core/i18n/translate.pipe';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './hero.html',
   styleUrls: ['./hero.scss']
 })
@@ -16,9 +17,7 @@ export class HeroComponent {
   onWindowScroll() {
     const scrollPosition = window.scrollY;
     const fadeDistance = HERO_FADE_DISTANCE;
-    
+
     this.heroOpacity = Math.max(0, 1 - (scrollPosition / fadeDistance));
-
-
   }
 }

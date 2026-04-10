@@ -2,11 +2,9 @@
 	<header class="services-header" appScrollReveal>
 		<p class="section-eyebrow">
 			<span class="eyebrow-dash"></span>
-			Services · 03
+			{{ 'services.eyebrow' | t }}
 		</p>
-		<h2 class="section-title">
-			Cuatro formas en las que <em>puedo ayudarte.</em>
-		</h2>
+		<h2 class="section-title" [innerHTML]="'services.title' | t"></h2>
 	</header>
 
 	<div class="services-grid">
@@ -18,12 +16,8 @@
 					<i class="fas fa-layer-group"></i>
 				</div>
 			</div>
-			<h3 class="service-title">Frontend con Angular y Vue</h3>
-			<p class="service-description">
-				Aplicaciones web modernas con Angular y VueJS. Interfaces responsive y
-				de alto rendimiento en TypeScript, Bootstrap y TailwindCSS. Arquitectura
-				frontend escalable.
-			</p>
+			<h3 class="service-title">{{ 'services.s1.title' | t }}</h3>
+			<p class="service-description">{{ 'services.s1.desc' | t }}</p>
 			<div class="service-tech">
 				<span class="tech-badge">Angular</span>
 				<span class="tech-badge">VueJS</span>
@@ -40,11 +34,8 @@
 					<i class="fas fa-server"></i>
 				</div>
 			</div>
-			<h3 class="service-title">Backend y arquitectura</h3>
-			<p class="service-description">
-				APIs REST con Python (FastAPI) y C#. Patrones de diseño, principios de
-				arquitectura limpia y programación concurrente para sistemas robustos.
-			</p>
+			<h3 class="service-title">{{ 'services.s2.title' | t }}</h3>
+			<p class="service-description">{{ 'services.s2.desc' | t }}</p>
 			<div class="service-tech">
 				<span class="tech-badge">Python</span>
 				<span class="tech-badge">FastAPI</span>
@@ -61,11 +52,8 @@
 					<i class="fas fa-database"></i>
 				</div>
 			</div>
-			<h3 class="service-title">Diseño y optimización de datos</h3>
-			<p class="service-description">
-				SQL Server y PostgreSQL. Diseño de esquemas relacionales y optimización
-				de consultas SQL complejas para garantizar integridad y velocidad.
-			</p>
+			<h3 class="service-title">{{ 'services.s3.title' | t }}</h3>
+			<p class="service-description">{{ 'services.s3.desc' | t }}</p>
 			<div class="service-tech">
 				<span class="tech-badge">PostgreSQL</span>
 				<span class="tech-badge">SQL Server</span>
@@ -81,12 +69,8 @@
 					<i class="fas fa-brain"></i>
 				</div>
 			</div>
-			<h3 class="service-title">Algoritmos y NLP</h3>
-			<p class="service-description">
-				Algoritmos avanzados (RAG, clustering, indexación FAISS) y análisis de
-				texto con spaCy. Enfoque en problemas complejos de data science y lógica
-				de negocio.
-			</p>
+			<h3 class="service-title">{{ 'services.s4.title' | t }}</h3>
+			<p class="service-description">{{ 'services.s4.desc' | t }}</p>
 			<div class="service-tech">
 				<span class="tech-badge">NLP</span>
 				<span class="tech-badge">spaCy</span>

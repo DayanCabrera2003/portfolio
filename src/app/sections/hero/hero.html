@@ -1,43 +1,40 @@
-<section class="hero" [style.opacity]="heroOpacity" role="img" aria-label="Dayan Cabrera Corvo — Desarrollador de software">
+<section class="hero" [style.opacity]="heroOpacity" role="img" aria-label="Dayan Cabrera Corvo">
   <div class="hero-grid">
     <div class="hero-meta">
-      <span class="meta-line">N<sup>o</sup> 01</span>
-      <span class="meta-line">Portfolio · 2025</span>
+      <span class="meta-line" [innerHTML]="'hero.meta.no' | t"></span>
+      <span class="meta-line">{{ 'hero.meta.portfolio' | t }}</span>
     </div>
 
     <div class="hero-content">
       <p class="eyebrow">
         <span class="eyebrow-dash"></span>
-        Full-Stack Developer · La Habana
+        {{ 'hero.eyebrow' | t }}
       </p>
       <h1 class="main-title">
-        <span class="title-line">Dayan</span>
-        <span class="title-line title-line--italic">Cabrera <em>Corvo</em></span>
+        <span class="title-line">{{ 'hero.title.line1' | t }}</span>
+        <span class="title-line title-line--italic" [innerHTML]="'hero.title.line2' | t"></span>
       </h1>
-      <p class="tagline">
-        Construyo sistemas robustos en <strong>Angular, Python, C#</strong> y <strong>Rust</strong>
-        desde la Universidad de La Habana.
-      </p>
+      <p class="tagline" [innerHTML]="'hero.tagline' | t"></p>
       <div class="hero-actions">
         <a href="assets/Dayan_Cabrera_Corvo_CV.pdf" download="Dayan_Cabrera_Corvo_CV.pdf" class="hero-cta">
-          <span>Descargar CV</span>
+          <span>{{ 'hero.cta' | t }}</span>
           <i class="fas fa-arrow-down"></i>
         </a>
         <a href="#about" class="hero-link">
-          Conocer más
+          {{ 'hero.link' | t }}
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
     </div>
 
     <div class="hero-sig">
-      <span class="sig-label">Est.</span>
+      <span class="sig-label">{{ 'hero.sig.label' | t }}</span>
       <span class="sig-year">2022</span>
     </div>
   </div>
 
   <div class="scroll-indicator" aria-hidden="true">
-    <span class="scroll-label">scroll</span>
+    <span class="scroll-label">{{ 'hero.scroll' | t }}</span>
     <span class="scroll-line"></span>
   </div>
 </section>

@@ -4,32 +4,25 @@
 			<div class="about-photo-frame">
 				<img
 					src="assets/Dayan.webp"
-					alt="Dayan Cabrera Corvo — Programador Cubano Full-Stack Developer"
+					alt="Dayan Cabrera Corvo"
 					class="about-photo"
 					loading="eager"
 					width="220"
 					height="220" />
 			</div>
 			<div class="photo-caption">
-				<span class="caption-mark">Est.</span>
-				<span class="caption-text">Habana · CU</span>
+				<span class="caption-mark">{{ 'about.photo.mark' | t }}</span>
+				<span class="caption-text">{{ 'about.photo.text' | t }}</span>
 			</div>
 		</div>
 
 		<div class="about-intro" appScrollReveal>
 			<p class="section-eyebrow">
 				<span class="eyebrow-dash"></span>
-				About · 01
+				{{ 'about.eyebrow' | t }}
 			</p>
-			<h2 class="section-title">
-				Un <em>programador cubano</em> construyendo sistemas con intención.
-			</h2>
-			<p class="bio-text">
-				Soy estudiante de tercer año de <strong>Ciencias de la Computación</strong> en la
-				Universidad de La Habana. Trabajo en <strong>Angular, Python, C#</strong> y <strong>Rust</strong>,
-				con foco en arquitectura de software, sistemas concurrentes y la creación de
-				aplicaciones que funcionan bien bajo presión.
-			</p>
+			<h2 class="section-title" [innerHTML]="'about.title' | t"></h2>
+			<p class="bio-text" [innerHTML]="'about.bio' | t"></p>
 		</div>
 	</div>
 
@@ -38,27 +31,27 @@
 		<div class="about-card" appScrollReveal [revealDelay]="100">
 			<h3 class="card-title">
 				<span class="card-index">01</span>
-				Detalles personales
+				{{ 'about.card1.title' | t }}
 			</h3>
 			<ul class="details-list">
 				<li>
-					<span class="detail-label">Nombre</span>
+					<span class="detail-label">{{ 'about.card1.name' | t }}</span>
 					<span class="detail-value">Dayan Cabrera Corvo</span>
 				</li>
 				<li>
-					<span class="detail-label">Rol</span>
-					<span class="detail-value">Computer Science Student</span>
+					<span class="detail-label">{{ 'about.card1.role' | t }}</span>
+					<span class="detail-value">{{ 'about.card1.roleValue' | t }}</span>
 				</li>
 				<li>
-					<span class="detail-label">Email</span>
+					<span class="detail-label">{{ 'about.card1.email' | t }}</span>
 					<span class="detail-value">dayancorvo&#64;gmail.com</span>
 				</li>
 				<li>
-					<span class="detail-label">Teléfono</span>
+					<span class="detail-label">{{ 'about.card1.phone' | t }}</span>
 					<span class="detail-value">+53 55801450</span>
 				</li>
 				<li>
-					<span class="detail-label">GitHub</span>
+					<span class="detail-label">{{ 'about.card1.github' | t }}</span>
 					<span class="detail-value">DayanCabrera2003</span>
 				</li>
 			</ul>
@@ -68,36 +61,29 @@
 		<div class="about-card" appScrollReveal [revealDelay]="200">
 			<h3 class="card-title">
 				<span class="card-index">02</span>
-				Áreas de enfoque
+				{{ 'about.card2.title' | t }}
 			</h3>
 			<div class="expertise-list">
 				<div class="expertise-item">
 					<div class="expertise-head">
 						<i class="fas fa-desktop"></i>
-						<span>Frontend</span>
+						<span>{{ 'about.card2.frontend' | t }}</span>
 					</div>
-					<p>
-						Angular y VueJS para aplicaciones enterprise. Interfaces responsive con
-						Bootstrap y TailwindCSS.
-					</p>
+					<p>{{ 'about.card2.frontendText' | t }}</p>
 				</div>
 				<div class="expertise-item">
 					<div class="expertise-head">
 						<i class="fas fa-server"></i>
-						<span>Backend</span>
+						<span>{{ 'about.card2.backend' | t }}</span>
 					</div>
-					<p>
-						Python (FastAPI) y C#. Programación concurrente y arquitectura limpia.
-					</p>
+					<p>{{ 'about.card2.backendText' | t }}</p>
 				</div>
 				<div class="expertise-item">
 					<div class="expertise-head">
 						<i class="fas fa-database"></i>
-						<span>Datos</span>
+						<span>{{ 'about.card2.data' | t }}</span>
 					</div>
-					<p>
-						Esquemas relacionales y optimización en SQL Server y PostgreSQL.
-					</p>
+					<p>{{ 'about.card2.dataText' | t }}</p>
 				</div>
 			</div>
 		</div>
@@ -106,14 +92,11 @@
 		<div class="about-card about-card--cta" appScrollReveal [revealDelay]="300">
 			<h3 class="card-title">
 				<span class="card-index">03</span>
-				¿Trabajamos juntos?
+				{{ 'about.card3.title' | t }}
 			</h3>
-			<p class="cta-text">
-				Disponible para proyectos freelance, colaboraciones open-source y
-				oportunidades full-time remotas.
-			</p>
+			<p class="cta-text">{{ 'about.card3.text' | t }}</p>
 			<a href="assets/Dayan_Cabrera_Corvo_CV.pdf" download="Dayan_Cabrera_Corvo_CV.pdf" class="cta-button">
-				<span>Descargar CV</span>
+				<span>{{ 'about.card3.cta' | t }}</span>
 				<i class="fas fa-arrow-down"></i>
 			</a>
 			<a href="mailto:dayancorvo@gmail.com" class="cta-link">

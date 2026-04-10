@@ -73,49 +73,60 @@
   }
 }
 
-.navbar-meta {
+// ---- Language toggle ----
+.lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: $r-full;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: $font-body;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  cursor: pointer;
   user-select: none;
+  transition: border-color $dur-fast $ease-out, background $dur-fast $ease-out;
 
-  .meta-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: $ember;
-    box-shadow: 0 0 0 3px rgba(217, 84, 43, 0.2);
-    animation: pulse 2.4s ease-in-out infinite;
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.04);
   }
-}
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 3px rgba(217, 84, 43, 0.2); }
-  50%      { opacity: 0.7; box-shadow: 0 0 0 6px rgba(217, 84, 43, 0.05); }
+  .lang-opt {
+    transition: color $dur-fast $ease-out;
+
+    &.active {
+      color: $clay-soft;
+    }
+  }
+
+  .lang-sep {
+    opacity: 0.35;
+    font-weight: 400;
+  }
 }
 
 // Responsive
 @include bp-down($bp-md) {
   .navbar-brand .brand-name { display: none; }
   .navbar-brand .brand-mark { font-size: 1.1rem; }
-  .navbar-meta { font-size: 0.68rem; }
 }
 
 @include bp-down($bp-sm) {
   .navbar {
-    padding: 9px 14px;
-  }
-  .navbar-meta {
-    display: none;
+    padding: 9px 12px;
   }
   .navbar-brand {
     position: static;
     transform: none;
   }
-  .navbar-icons { gap: 14px; }
+  .navbar-icons { gap: 12px; }
+  .lang-toggle {
+    padding: 5px 10px;
+    font-size: 0.62rem;
+  }
 }

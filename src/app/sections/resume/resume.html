@@ -2,29 +2,27 @@
 	<header class="resume-header" appScrollReveal>
 		<p class="section-eyebrow">
 			<span class="eyebrow-dash"></span>
-			Resume · 02
+			{{ 'resume.eyebrow' | t }}
 		</p>
-		<h2 class="section-title">
-			Trabajo, estudio, <em>y obra.</em>
-		</h2>
+		<h2 class="section-title" [innerHTML]="'resume.title' | t"></h2>
 	</header>
 
 	<div class="resume-content">
 		<!-- Column 1: Education -->
 		<div class="resume-column" appScrollReveal>
 			<div class="column-header">
-				<span class="column-index">Ed</span>
-				<h3 class="column-title">Educación</h3>
+				<span class="column-index">{{ 'resume.col1.index' | t }}</span>
+				<h3 class="column-title">{{ 'resume.col1.title' | t }}</h3>
 			</div>
 
 			<div class="timeline">
 				<div class="timeline-item">
 					<div class="timeline-dot"></div>
 					<div class="timeline-body">
-						<span class="timeline-period">2022 — Presente</span>
-						<h4 class="institution">Universidad de La Habana</h4>
-						<p class="department">Facultad de Matemática y Computación</p>
-						<p class="degree">Licenciatura en Ciencias de la Computación</p>
+						<span class="timeline-period">{{ 'resume.edu.period' | t }}</span>
+						<h4 class="institution">{{ 'resume.edu.institution' | t }}</h4>
+						<p class="department">{{ 'resume.edu.department' | t }}</p>
+						<p class="degree">{{ 'resume.edu.degree' | t }}</p>
 					</div>
 				</div>
 			</div>
@@ -33,56 +31,56 @@
 		<!-- Column 2: Professional experience -->
 		<div class="resume-column resume-column--main" appScrollReveal [revealDelay]="150">
 			<div class="column-header">
-				<span class="column-index">Wk</span>
-				<h3 class="column-title">Proyectos destacados</h3>
+				<span class="column-index">{{ 'resume.col2.index' | t }}</span>
+				<h3 class="column-title">{{ 'resume.col2.title' | t }}</h3>
 			</div>
 
 			<div class="project-list">
 				<article class="project-item">
 					<div class="project-head">
-						<h4 class="project-title">Simulador Multiagente de Turismo en Cuba</h4>
-						<span class="project-year">2025</span>
+						<h4 class="project-title">{{ 'resume.proj1.title' | t }}</h4>
+						<span class="project-year">{{ 'resume.proj1.year' | t }}</span>
 					</div>
-					<p class="project-tech">Python · FAISS · Playwright · JSONL</p>
+					<p class="project-tech">{{ 'resume.proj1.tech' | t }}</p>
 					<ul class="project-highlights">
-						<li>Sistema RAG con procesamiento NLP avanzado.</li>
-						<li>Motor de recomendación personalizada.</li>
+						<li>{{ 'resume.proj1.h1' | t }}</li>
+						<li>{{ 'resume.proj1.h2' | t }}</li>
 					</ul>
 				</article>
 
 				<article class="project-item">
 					<div class="project-head">
-						<h4 class="project-title">Sistema de Gestión Escolar</h4>
-						<span class="project-year">2025</span>
+						<h4 class="project-title">{{ 'resume.proj2.title' | t }}</h4>
+						<span class="project-year">{{ 'resume.proj2.year' | t }}</span>
 					</div>
-					<p class="project-tech">Angular · C# · SQL Server · LaTeX</p>
+					<p class="project-tech">{{ 'resume.proj2.tech' | t }}</p>
 					<ul class="project-highlights">
-						<li>Plataforma web integral con módulos de profesores y aulas.</li>
-						<li>Generación automatizada de reportes PDF.</li>
+						<li>{{ 'resume.proj2.h1' | t }}</li>
+						<li>{{ 'resume.proj2.h2' | t }}</li>
 					</ul>
 				</article>
 
 				<article class="project-item">
 					<div class="project-head">
-						<h4 class="project-title">Perspectiva Backend</h4>
-						<span class="project-year">2025</span>
+						<h4 class="project-title">{{ 'resume.proj3.title' | t }}</h4>
+						<span class="project-year">{{ 'resume.proj3.year' | t }}</span>
 					</div>
-					<p class="project-tech">Python · FastAPI · PostgreSQL · Redis · spaCy · Docker</p>
+					<p class="project-tech">{{ 'resume.proj3.tech' | t }}</p>
 					<ul class="project-highlights">
-						<li>Extracción de noticias vía RSS y scraping.</li>
-						<li>API REST con categorización automática y agrupación por similitud usando NLP.</li>
+						<li>{{ 'resume.proj3.h1' | t }}</li>
+						<li>{{ 'resume.proj3.h2' | t }}</li>
 					</ul>
 				</article>
 
 				<article class="project-item">
 					<div class="project-head">
-						<h4 class="project-title">Compilador HULK</h4>
-						<span class="project-year">2024 — 2025</span>
+						<h4 class="project-title">{{ 'resume.proj4.title' | t }}</h4>
+						<span class="project-year">{{ 'resume.proj4.year' | t }}</span>
 					</div>
-					<p class="project-tech">Rust · LALRPOP</p>
+					<p class="project-tech">{{ 'resume.proj4.tech' | t }}</p>
 					<ul class="project-highlights">
-						<li>Compilador completo con soporte orientado a objetos (clases, herencia, polimorfismo).</li>
-						<li>Construcción de árboles de sintaxis abstracta y detección de errores.</li>
+						<li>{{ 'resume.proj4.h1' | t }}</li>
+						<li>{{ 'resume.proj4.h2' | t }}</li>
 					</ul>
 				</article>
 			</div>
@@ -91,12 +89,12 @@
 		<!-- Column 3: Technical skills -->
 		<div class="resume-column" appScrollReveal [revealDelay]="300">
 			<div class="column-header">
-				<span class="column-index">Sk</span>
-				<h3 class="column-title">Stack técnico</h3>
+				<span class="column-index">{{ 'resume.col3.index' | t }}</span>
+				<h3 class="column-title">{{ 'resume.col3.title' | t }}</h3>
 			</div>
 
 			<div class="skills-group">
-				<h5 class="skills-subtitle">Languages & Frameworks</h5>
+				<h5 class="skills-subtitle">{{ 'resume.skills.lang' | t }}</h5>
 				<div class="skill-tags">
 					<span class="skill-tag">Python</span>
 					<span class="skill-tag">C#</span>
@@ -112,7 +110,7 @@
 			</div>
 
 			<div class="skills-group">
-				<h5 class="skills-subtitle">Data & Infra</h5>
+				<h5 class="skills-subtitle">{{ 'resume.skills.data' | t }}</h5>
 				<div class="skill-tags">
 					<span class="skill-tag">SQL Server</span>
 					<span class="skill-tag">PostgreSQL</span>
@@ -124,25 +122,25 @@
 			</div>
 
 			<div class="skills-group">
-				<h5 class="skills-subtitle">Competencias</h5>
+				<h5 class="skills-subtitle">{{ 'resume.skills.comp' | t }}</h5>
 				<ul class="competencies-list">
-					<li>Arquitectura de software y patrones de diseño</li>
-					<li>Programación concurrente e integración de servicios</li>
-					<li>Web scraping avanzado y NLP</li>
-					<li>Esquemas relacionales y optimización de consultas</li>
+					<li>{{ 'resume.comp1' | t }}</li>
+					<li>{{ 'resume.comp2' | t }}</li>
+					<li>{{ 'resume.comp3' | t }}</li>
+					<li>{{ 'resume.comp4' | t }}</li>
 				</ul>
 			</div>
 
 			<div class="skills-group">
-				<h5 class="skills-subtitle">Idiomas</h5>
+				<h5 class="skills-subtitle">{{ 'resume.skills.langs' | t }}</h5>
 				<div class="language-items">
 					<div class="language-item">
-						<span class="language-name">Español</span>
-						<span class="language-level">Nativo</span>
+						<span class="language-name">{{ 'resume.lang.es' | t }}</span>
+						<span class="language-level">{{ 'resume.lang.esLevel' | t }}</span>
 					</div>
 					<div class="language-item">
-						<span class="language-name">Inglés</span>
-						<span class="language-level">Int. Avanzado</span>
+						<span class="language-name">{{ 'resume.lang.en' | t }}</span>
+						<span class="language-level">{{ 'resume.lang.enLevel' | t }}</span>
 					</div>
 				</div>
 			</div>
