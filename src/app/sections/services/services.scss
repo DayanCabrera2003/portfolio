@@ -1,283 +1,224 @@
+@use '../../core/constants/tokens' as *;
+
 .services-section {
-    background: #F3EDD7;
-    min-height: 80vh;
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 40px 40px 60px 40px;
+  background: $paper;
+  position: relative;
+  width: 100%;
+  padding: clamp(80px, 10vw, 140px) $content-gutter clamp(60px, 8vw, 100px);
+  overflow: hidden;
 }
 
-.services-main-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width: 100%;
-    max-width: 1400px;
-    padding-left: 30px;
+.services-section::before {
+  content: 'services';
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  font-family: $font-display;
+  font-style: italic;
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 300;
+  color: rgba(154, 74, 36, 0.05);
+  line-height: 0.8;
+  pointer-events: none;
+  letter-spacing: -0.04em;
 }
 
-.services-main-title i {
-    color: #8B7355;
-    font-size: 52px;
-    animation: rotate 4s linear infinite;
-    will-change: transform;
+// ------------ Header ------------
+.services-header {
+  position: relative;
+  max-width: $content-max;
+  margin: 0 auto clamp(48px, 6vw, 80px);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .services-main-title i {
-        animation: none;
-    }
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-3;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $clay;
+  margin-bottom: $sp-4;
+
+  .eyebrow-dash {
+    width: 36px;
+    height: 1px;
+    background: $clay;
+  }
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.section-title {
+  font-family: $font-display;
+  font-size: $fs-h1;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: $ink;
+  margin: 0;
+  max-width: 22ch;
+
+  em {
+    font-style: italic;
+    color: $clay;
+    font-weight: 400;
+  }
 }
 
+// ------------ Grid ------------
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    width: 100%;
-    max-width: 1400px;
-    padding: 0 30px;
+  position: relative;
+  max-width: $content-max;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $sp-5;
 }
 
+// ------------ Card ------------
 .service-card {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    padding: 40px 30px;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    border: 2px solid transparent;
-    border-left: 3px solid #8B7355;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding: clamp(28px, 3vw, 44px);
+  background: $card-bg-strong;
+  backdrop-filter: blur($card-blur);
+  -webkit-backdrop-filter: blur($card-blur);
+  border: 1px solid $card-border;
+  border-radius: $r-lg;
+  overflow: hidden;
+  transition: transform $dur-base $ease-out, border-color $dur-base $ease-out, box-shadow $dur-base $ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: $sp-3;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: linear-gradient(90deg, #8B7355 0%, #A0826D 100%);
-        transform: scaleX(0);
-        transition: transform 0.4s ease;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, $clay, $ember);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $dur-slow $ease-out;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(154, 74, 36, 0.3);
+    box-shadow: $shadow-lg;
+
+    &::before { transform: scaleX(1); }
+
+    .service-number { color: $clay; }
+    .service-icon {
+      background: $ink;
+      border-color: $ink;
+      i { color: $clay-soft; }
     }
+  }
+}
 
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 12px 35px rgba(139, 115, 85, 0.25);
-        border-color: #8B7355;
-
-        &::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            transform: scale(1.1) rotate(5deg);
-            background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
-        }
-
-        .service-icon i {
-            color: white;
-        }
-    }
+.service-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: $sp-4;
 }
 
 .service-number {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 64px;
-    font-weight: 800;
-    color: rgba(139, 115, 85, 0.08);
-    line-height: 1;
-    font-family: 'Inter', sans-serif;
-    pointer-events: none;
-    user-select: none;
-    transition: color 0.4s ease;
-}
-
-.service-card:hover .service-number {
-    color: rgba(139, 115, 85, 0.15);
+  font-family: $font-display;
+  font-style: italic;
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 0.9;
+  color: rgba(154, 74, 36, 0.22);
+  letter-spacing: -0.04em;
+  transition: color $dur-base $ease-out;
+  user-select: none;
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
-    background: rgba(139, 115, 85, 0.15);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-    border: 2px solid rgba(139, 115, 85, 0.12);
-    transition: transform 0.4s ease, background 0.4s ease, border-color 0.4s ease;
-}
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: $paper;
+  border: 1px solid $paper-edge;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background $dur-base $ease-out, border-color $dur-base $ease-out;
 
-.service-icon i {
-    font-size: 40px;
-    color: #8B7355;
-    transition: color 0.4s ease;
+  i {
+    font-size: 1.3rem;
+    color: $clay;
+    transition: color $dur-base $ease-out;
+  }
 }
 
 .service-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 18px;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.3;
+  font-family: $font-display;
+  font-size: clamp(1.35rem, 1vw + 1rem, 1.75rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: $ink;
+  margin: 0;
 }
 
 .service-description {
-    font-size: 15px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 25px;
-    text-align: justify;
-    font-family: 'Inter', sans-serif;
+  font-family: $font-body;
+  font-size: 0.92rem;
+  line-height: $lh-relaxed;
+  color: $ink-soft;
+  margin: 0 0 $sp-4 0;
 }
 
 .service-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
 }
 
 .tech-badge {
-    display: inline-block;
-    padding: 6px 14px;
-    background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
-    color: white;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: default;
+  display: inline-block;
+  padding: 6px 12px;
+  background: transparent;
+  color: $ink;
+  border: 1px solid $paper-edge;
+  border-radius: $r-full;
+  font-family: $font-body;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background $dur-fast $ease-out, color $dur-fast $ease-out, border-color $dur-fast $ease-out;
+  cursor: default;
+
+  &:hover {
+    background: $ink;
+    color: $paper;
+    border-color: $ink;
+  }
 }
 
-.tech-badge:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+// ------------ Responsive ------------
+@include bp-down($bp-md) {
+  .services-grid {
+    gap: $sp-4;
+  }
 }
 
-/* RESPONSIVE */
-// Tablet
-@media (max-width: 992px) {
-    .services-section {
-        padding: 30px 30px 50px 30px;
-    }
-
-    .services-main-title {
-        font-size: 36px;
-        margin-bottom: 40px;
-        padding-left: 20px;
-    }
-
-    .services-main-title i {
-        font-size: 40px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-        padding: 0 20px;
-    }
-
-    .service-card {
-        padding: 28px 22px;
-    }
-
-    .service-title {
-        font-size: 22px;
-    }
-}
-
-// Small tablet: single column
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-// Mobile
-@media (max-width: 576px) {
-    .services-section {
-        padding: 30px 20px 40px 20px;
-    }
-
-    .services-main-title {
-        font-size: 28px;
-        margin-bottom: 30px;
-        gap: 12px;
-        letter-spacing: 1px;
-        padding-left: 10px;
-    }
-
-    .services-main-title i {
-        font-size: 32px;
-    }
-
-    .services-grid {
-        gap: 25px;
-        padding: 0 10px;
-    }
-
-    .service-card {
-        padding: 25px 20px;
-        border-radius: 12px;
-    }
-
-    .service-number {
-        font-size: 48px;
-        top: 10px;
-        right: 15px;
-    }
-
-    .service-icon {
-        width: 65px;
-        height: 65px;
-        margin-bottom: 20px;
-    }
-
-    .service-icon i {
-        font-size: 32px;
-    }
-
-    .service-title {
-        font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .service-description {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 20px;
-        text-align: left;
-    }
-
-    .tech-badge {
-        font-size: 11px;
-        padding: 5px 12px;
-    }
+@include bp-down($bp-sm) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    padding: $sp-5;
+  }
+  .services-section::before {
+    font-size: 5rem;
+    top: 30px;
+  }
 }

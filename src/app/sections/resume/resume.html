@@ -1,115 +1,102 @@
-<div class="resume-section" id="resume">
-	<h1 class="resume-main-title">
-		<div class="lottie-icon" id="resume-lottie"></div>
-		Resume
-	</h1>
+<section class="resume-section" id="resume">
+	<header class="resume-header" appScrollReveal>
+		<p class="section-eyebrow">
+			<span class="eyebrow-dash"></span>
+			Resume · 02
+		</p>
+		<h2 class="section-title">
+			Trabajo, estudio, <em>y obra.</em>
+		</h2>
+	</header>
 
 	<div class="resume-content">
-		<!-- Columna 1: Educación -->
+		<!-- Column 1: Education -->
 		<div class="resume-column" appScrollReveal>
-			<h2 class="column-title">
-				<i class="fas fa-graduation-cap"></i>
-				Education
-			</h2>
-			
-			<div class="timeline-item">
-				<div class="timeline-dot"></div>
-				<div class="timeline-content">
-					<h3 class="institution">Universidad de La Habana</h3>
-					<p class="department">Facultad de Matemática y Computación</p>
-					<p class="degree">Licenciatura en Ciencias de la Computación</p>
-					<p class="period">
-						<i class="fas fa-calendar-alt"></i>
-						2022 - Presente
-					</p>
+			<div class="column-header">
+				<span class="column-index">Ed</span>
+				<h3 class="column-title">Educación</h3>
+			</div>
+
+			<div class="timeline">
+				<div class="timeline-item">
+					<div class="timeline-dot"></div>
+					<div class="timeline-body">
+						<span class="timeline-period">2022 — Presente</span>
+						<h4 class="institution">Universidad de La Habana</h4>
+						<p class="department">Facultad de Matemática y Computación</p>
+						<p class="degree">Licenciatura en Ciencias de la Computación</p>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="column-divider"></div>
-
-		<!-- Columna 2: Experiencia Profesional -->
-		<div class="resume-column" appScrollReveal [revealDelay]="150">
-			<h2 class="column-title">
-				<i class="fas fa-briefcase"></i>
-				Professional Experience
-			</h2>
-
-			<div class="project-item">
-				<h3 class="project-title">
-					<i class="fas fa-robot"></i>
-					Simulador Multiagente de Turismo en Cuba
-				</h3>
-				<p class="project-tech">
-					<i class="fas fa-code"></i>
-					2025 • Python, FAISS, Playwright, JSONL
-				</p>
-				<ul class="project-highlights">
-					<li>Sistema RAG con procesamiento NLP avanzado</li>
-					<li>Motor de recomendación personalizada</li>
-				</ul>
+		<!-- Column 2: Professional experience -->
+		<div class="resume-column resume-column--main" appScrollReveal [revealDelay]="150">
+			<div class="column-header">
+				<span class="column-index">Wk</span>
+				<h3 class="column-title">Proyectos destacados</h3>
 			</div>
 
-			<div class="project-item">
-				<h3 class="project-title">
-					<i class="fas fa-school"></i>
-					Sistema de Gestión Escolar
-				</h3>
-				<p class="project-tech">
-					<i class="fas fa-code"></i>
-					2025 • Angular, C#, SQL Server, LaTeX
-				</p>
-				<ul class="project-highlights">
-					<li>Plataforma web integral con módulos de profesores y aulas</li>
-					<li>Generación automatizada de reportes PDF</li>
-				</ul>
-			</div>
+			<div class="project-list">
+				<article class="project-item">
+					<div class="project-head">
+						<h4 class="project-title">Simulador Multiagente de Turismo en Cuba</h4>
+						<span class="project-year">2025</span>
+					</div>
+					<p class="project-tech">Python · FAISS · Playwright · JSONL</p>
+					<ul class="project-highlights">
+						<li>Sistema RAG con procesamiento NLP avanzado.</li>
+						<li>Motor de recomendación personalizada.</li>
+					</ul>
+				</article>
 
-			<div class="project-item">
-				<h3 class="project-title">
-					<i class="fas fa-newspaper"></i>
-					Perspectiva Backend
-				</h3>
-				<p class="project-tech">
-					<i class="fas fa-code"></i>
-					2025 • Python, FastAPI, PostgreSQL, Redis, spaCy, Docker
-				</p>
-				<ul class="project-highlights">
-					<li>Extracción de noticias vía RSS y scraping</li>
-					<li>API REST con categorización automática y agrupación por similitud usando NLP</li>
-				</ul>
-			</div>
+				<article class="project-item">
+					<div class="project-head">
+						<h4 class="project-title">Sistema de Gestión Escolar</h4>
+						<span class="project-year">2025</span>
+					</div>
+					<p class="project-tech">Angular · C# · SQL Server · LaTeX</p>
+					<ul class="project-highlights">
+						<li>Plataforma web integral con módulos de profesores y aulas.</li>
+						<li>Generación automatizada de reportes PDF.</li>
+					</ul>
+				</article>
 
-			<div class="project-item">
-				<h3 class="project-title">
-					<i class="fas fa-cogs"></i>
-					Compilador HULK
-				</h3>
-				<p class="project-tech">
-					<i class="fas fa-code"></i>
-					2024-2025 • Rust, LALRPOP
-				</p>
-				<ul class="project-highlights">
-					<li>Compilador completo con soporte orientado a objetos (clases, herencia, polimorfismo)</li>
-					<li>Construcción de árboles de sintaxis abstracta y detección de errores</li>
-				</ul>
+				<article class="project-item">
+					<div class="project-head">
+						<h4 class="project-title">Perspectiva Backend</h4>
+						<span class="project-year">2025</span>
+					</div>
+					<p class="project-tech">Python · FastAPI · PostgreSQL · Redis · spaCy · Docker</p>
+					<ul class="project-highlights">
+						<li>Extracción de noticias vía RSS y scraping.</li>
+						<li>API REST con categorización automática y agrupación por similitud usando NLP.</li>
+					</ul>
+				</article>
+
+				<article class="project-item">
+					<div class="project-head">
+						<h4 class="project-title">Compilador HULK</h4>
+						<span class="project-year">2024 — 2025</span>
+					</div>
+					<p class="project-tech">Rust · LALRPOP</p>
+					<ul class="project-highlights">
+						<li>Compilador completo con soporte orientado a objetos (clases, herencia, polimorfismo).</li>
+						<li>Construcción de árboles de sintaxis abstracta y detección de errores.</li>
+					</ul>
+				</article>
 			</div>
 		</div>
 
-		<div class="column-divider"></div>
-
-		<!-- Columna 3: Habilidades Técnicas -->
+		<!-- Column 3: Technical skills -->
 		<div class="resume-column" appScrollReveal [revealDelay]="300">
-			<h2 class="column-title">
-				<i class="fas fa-tools"></i>
-				Technical Skills
-			</h2>
+			<div class="column-header">
+				<span class="column-index">Sk</span>
+				<h3 class="column-title">Stack técnico</h3>
+			</div>
 
-			<div class="skills-category">
-				<h3 class="skills-subtitle">
-					<i class="fas fa-laptop-code"></i>
-					Languages & Frameworks
-				</h3>
+			<div class="skills-group">
+				<h5 class="skills-subtitle">Languages & Frameworks</h5>
 				<div class="skill-tags">
 					<span class="skill-tag">Python</span>
 					<span class="skill-tag">C#</span>
@@ -118,58 +105,36 @@
 					<span class="skill-tag">SQL</span>
 					<span class="skill-tag">Angular</span>
 					<span class="skill-tag">VueJS</span>
+					<span class="skill-tag">FastAPI</span>
 					<span class="skill-tag">Bootstrap</span>
 					<span class="skill-tag">TailwindCSS</span>
-					<span class="skill-tag">FastAPI</span>
 				</div>
 			</div>
 
-			<div class="skills-category">
-				<h3 class="skills-subtitle">
-					<i class="fas fa-database"></i>
-					Backend & Databases
-				</h3>
+			<div class="skills-group">
+				<h5 class="skills-subtitle">Data & Infra</h5>
 				<div class="skill-tags">
 					<span class="skill-tag">SQL Server</span>
 					<span class="skill-tag">PostgreSQL</span>
 					<span class="skill-tag">Redis</span>
+					<span class="skill-tag">Docker</span>
+					<span class="skill-tag">Linux</span>
+					<span class="skill-tag">Git</span>
 				</div>
 			</div>
 
-			<div class="skills-category">
-				<h3 class="skills-subtitle">
-					<i class="fas fa-brain"></i>
-					Advanced Competencies
-				</h3>
+			<div class="skills-group">
+				<h5 class="skills-subtitle">Competencias</h5>
 				<ul class="competencies-list">
-					<li><i class="fas fa-check-circle"></i> Arquitectura de software y Patrones de diseño</li>
-					<li><i class="fas fa-check-circle"></i> Programación concurrente e Integración de servicios</li>
-					<li><i class="fas fa-check-circle"></i> Web scraping avanzado y NLP</li>
-					<li><i class="fas fa-check-circle"></i> Diseño de esquemas relacionales y optimización de consultas</li>
+					<li>Arquitectura de software y patrones de diseño</li>
+					<li>Programación concurrente e integración de servicios</li>
+					<li>Web scraping avanzado y NLP</li>
+					<li>Esquemas relacionales y optimización de consultas</li>
 				</ul>
 			</div>
 
-			<div class="skills-category">
-				<h3 class="skills-subtitle">
-					<i class="fas fa-wrench"></i>
-					Tools & Others
-				</h3>
-				<div class="skill-tags">
-					<span class="skill-tag">Git</span>
-					<span class="skill-tag">GitHub</span>
-					<span class="skill-tag">Linux</span>
-					<span class="skill-tag">Windows</span>
-					<span class="skill-tag">Docker</span>
-					<span class="skill-tag">LaTeX</span>
-					<span class="skill-tag">Markdown</span>
-				</div>
-			</div>
-
-			<div class="skills-category">
-				<h3 class="skills-subtitle">
-					<i class="fas fa-language"></i>
-					Languages
-				</h3>
+			<div class="skills-group">
+				<h5 class="skills-subtitle">Idiomas</h5>
 				<div class="language-items">
 					<div class="language-item">
 						<span class="language-name">Español</span>
@@ -177,10 +142,10 @@
 					</div>
 					<div class="language-item">
 						<span class="language-name">Inglés</span>
-						<span class="language-level">Intermedio-Avanzado</span>
+						<span class="language-level">Int. Avanzado</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>

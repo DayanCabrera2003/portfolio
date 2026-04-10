@@ -1,6 +1,80 @@
+@use './app/core/constants/tokens' as *;
+
+// ------------------------------------------------------------
+// Global reset + base
+// ------------------------------------------------------------
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  background: $paper;
+  color: $ink-soft;
+  font-family: $font-body;
+  font-size: $fs-base;
+  line-height: $lh-normal;
+  font-weight: $fw-regular;
+}
+
+// Headings default to display face
+h1, h2, h3, h4 {
+  font-family: $font-display;
+  font-weight: $fw-display;
+  color: $ink;
+  line-height: $lh-tight;
+  letter-spacing: -0.015em;
+  margin: 0;
+  // Enable Fraunces optical sizing + subtle contrast
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 96, "SOFT" 30;
+}
+
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+// Subtle grain / paper atmosphere
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(154, 74, 36, 0.05), transparent 45%),
+    radial-gradient(circle at 80% 90%, rgba(154, 74, 36, 0.04), transparent 50%);
+  mix-blend-mode: multiply;
+}
+
+// Focus ring (accessibility)
+:focus-visible {
+  outline: 2px solid $ember;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+// Selection
+::selection {
+  background: $clay;
+  color: $paper;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

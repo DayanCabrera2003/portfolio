@@ -1,0 +1,118 @@
+// ============================================================
+// Design Tokens — "Warm Editorial"
+// Inspired by Cuban printmaking + editorial magazine layouts
+// ============================================================
+
+// ---- Color: Paper (background tones) ----
+$paper:        #f4ecd7;   // primary cream
+$paper-soft:   #f9f3e2;   // lighter cream for cards
+$paper-deep:   #e8dcba;   // darker cream for rules/separators
+$paper-edge:   #d8c9a0;   // rules, borders
+
+// ---- Color: Ink (foreground tones) ----
+$ink:          #1f1a15;   // deep warm black — headings
+$ink-soft:     #3d342c;   // body copy
+$ink-mute:     #7a6f64;   // meta, captions
+$ink-faint:    #b0a596;   // disabled, subtle
+
+// ---- Color: Clay (primary accent — Cuban terracotta) ----
+$clay:         #9a4a24;   // primary accent
+$clay-deep:    #6e3214;   // hover/pressed
+$clay-soft:    #c67a4f;   // tints
+$clay-wash:    rgba(154, 74, 36, 0.08);
+$clay-edge:    rgba(154, 74, 36, 0.22);
+
+// ---- Color: Ember (vibrant accent — CTAs, highlights) ----
+$ember:        #d9542b;
+$ember-deep:   #b03d18;
+
+// ---- Color: Night (dark surfaces — nav, overlays) ----
+$night:        #1a1410;
+$night-glass:  rgba(26, 20, 16, 0.55);
+
+// ---- Typography: Families ----
+$font-display: 'Fraunces', 'Georgia', serif;
+$font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+// ---- Typography: Fluid scale (clamp based) ----
+$fs-display:   clamp(2.75rem, 5.5vw + 1rem, 5.75rem);
+$fs-h1:        clamp(2rem, 3vw + 1rem, 3.25rem);
+$fs-h2:        clamp(1.5rem, 1.6vw + 0.9rem, 2.125rem);
+$fs-h3:        clamp(1.125rem, 0.6vw + 0.95rem, 1.375rem);
+$fs-lg:        1.125rem;   // 18
+$fs-base:      1rem;       // 16
+$fs-sm:        0.875rem;   // 14
+$fs-xs:        0.75rem;    // 12
+
+// ---- Typography: Weights ----
+$fw-regular:   400;
+$fw-medium:    500;
+$fw-semibold:  600;
+$fw-bold:      700;
+$fw-display:   500;   // Fraunces looks best mid-weight
+
+// ---- Line heights ----
+$lh-tight:     1.1;
+$lh-snug:      1.3;
+$lh-normal:    1.55;
+$lh-relaxed:   1.7;
+
+// ---- Spacing scale ----
+$sp-1:   4px;
+$sp-2:   8px;
+$sp-3:   12px;
+$sp-4:   16px;
+$sp-5:   24px;
+$sp-6:   32px;
+$sp-7:   48px;
+$sp-8:   64px;
+$sp-9:   96px;
+$sp-10:  128px;
+
+// ---- Radii ----
+$r-sm:    6px;
+$r-md:    10px;
+$r-lg:    16px;
+$r-xl:    24px;
+$r-full:  999px;
+
+// ---- Shadows (warm, layered) ----
+$shadow-sm:  0 1px 2px rgba(31, 26, 21, 0.06),
+             0 2px 4px rgba(31, 26, 21, 0.04);
+$shadow-md:  0 4px 10px rgba(31, 26, 21, 0.08),
+             0 10px 24px rgba(31, 26, 21, 0.06);
+$shadow-lg:  0 12px 32px rgba(31, 26, 21, 0.12),
+             0 24px 48px rgba(31, 26, 21, 0.08);
+$shadow-clay: 0 10px 28px rgba(154, 74, 36, 0.25);
+
+// ---- Glass / card surface ----
+$card-bg:        rgba(255, 251, 240, 0.55);
+$card-bg-strong: rgba(255, 251, 240, 0.72);
+$card-border:    rgba(154, 74, 36, 0.14);
+$card-blur:      10px;
+
+// ---- Motion ----
+$ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+$dur-fast:    180ms;
+$dur-base:    280ms;
+$dur-slow:    520ms;
+
+// ---- Breakpoints ----
+$bp-xs:   480px;
+$bp-sm:   640px;
+$bp-md:   900px;
+$bp-lg:   1200px;
+$bp-xl:   1440px;
+
+@mixin bp-down($bp) {
+  @media (max-width: #{$bp - 1px}) { @content; }
+}
+@mixin bp-up($bp) {
+  @media (min-width: #{$bp}) { @content; }
+}
+
+// ---- Content widths ----
+$content-max: 1320px;
+$content-gutter: clamp(20px, 4vw, 56px);

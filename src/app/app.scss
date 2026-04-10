@@ -1,3 +1,4 @@
+@use './core/constants/tokens' as *;
 @use './core/constants/layout' as *;
 
 .skip-to-content {
@@ -5,46 +6,40 @@
   left: -9999px;
   top: 0;
   z-index: 1000;
-  padding: 12px 24px;
-  background: #2c3e50;
-  color: #fff;
-  font-weight: 700;
+  padding: $sp-3 $sp-5;
+  background: $ink;
+  color: $paper;
+  font-family: $font-body;
+  font-weight: $fw-semibold;
   text-decoration: none;
-  border-radius: 0 0 4px 0;
+  border-radius: 0 0 $r-sm 0;
 
   &:focus {
     left: 0;
   }
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 main {
   margin-left: $sidebar-width;
   width: calc(100% - #{$sidebar-width});
-  transition: margin-left 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: margin-left $dur-base $ease-out;
+  position: relative;
+  z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   main {
     margin-left: 0;
     width: 100%;
   }
 }
 
-// Section separators
+// Section separators — hairline editorial rule
 :host ::ng-deep {
   app-about,
   app-resume,
-  app-services {
+  app-services,
+  app-footer {
     display: block;
     position: relative;
 
@@ -55,12 +50,10 @@ main {
       background: linear-gradient(
         to right,
         transparent,
-        rgba(139, 115, 85, 0.2) 20%,
-        rgba(139, 115, 85, 0.3) 50%,
-        rgba(139, 115, 85, 0.2) 80%,
+        $paper-edge 15%,
+        $paper-edge 85%,
         transparent
       );
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     }
   }
 }

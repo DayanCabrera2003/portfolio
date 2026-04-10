@@ -1,99 +1,125 @@
-<div class="about-section" id="about">
-	<div class="about-photo-wrapper">
-		<div class="about-photo-circle">
-			<img src="assets/Dayan.webp" alt="Dayan Cabrera Corvo - Programador Cubano Full-Stack Developer" class="about-photo" loading="eager" width="200" height="200" />
+<section class="about-section" id="about">
+	<div class="about-header">
+		<div class="about-photo-wrapper">
+			<div class="about-photo-frame">
+				<img
+					src="assets/Dayan.webp"
+					alt="Dayan Cabrera Corvo — Programador Cubano Full-Stack Developer"
+					class="about-photo"
+					loading="eager"
+					width="220"
+					height="220" />
+			</div>
+			<div class="photo-caption">
+				<span class="caption-mark">Est.</span>
+				<span class="caption-text">Habana · CU</span>
+			</div>
 		</div>
-	</div>
-	
-	<div class="about-content">
-		<!-- Columna Izquierda: Who Am I? -->
-		<div class="about-column" appScrollReveal>
-			<h2 class="column-title">
-				<i class="fas fa-user-circle"></i>
-				Who Am I?
+
+		<div class="about-intro" appScrollReveal>
+			<p class="section-eyebrow">
+				<span class="eyebrow-dash"></span>
+				About · 01
+			</p>
+			<h2 class="section-title">
+				Un <em>programador cubano</em> construyendo sistemas con intención.
 			</h2>
 			<p class="bio-text">
-				Soy un <strong>programador cubano</strong> de La Habana, estudiante de tercer año de <strong>Ciencias de la Computación</strong>. Me especializo en <strong>desarrollo Full-Stack</strong> con tecnologías como <strong>Angular, Python, C# y Rust</strong>. Mi enfoque está en la <strong>arquitectura de software</strong> y la creación de sistemas robustos, escalables y eficientes.
+				Soy estudiante de tercer año de <strong>Ciencias de la Computación</strong> en la
+				Universidad de La Habana. Trabajo en <strong>Angular, Python, C#</strong> y <strong>Rust</strong>,
+				con foco en arquitectura de software, sistemas concurrentes y la creación de
+				aplicaciones que funcionan bien bajo presión.
 			</p>
-			<a href="assets/Dayan_Cabrera_Corvo_CV.pdf" download="Dayan_Cabrera_Corvo_CV.pdf" class="slogan">
-				<i class="fas fa-shield-alt"></i>
-				<span>"MAKE RELIABLE SOFTWARE!"</span>
-				<i class="fas fa-download slogan-download-icon"></i>
-			</a>
 		</div>
+	</div>
 
-		<div class="column-divider"></div>
-
-		<!-- Columna Central: Personal Details -->
-		<div class="about-column" appScrollReveal [revealDelay]="150">
-			<h2 class="column-title">
-				<i class="fas fa-id-card"></i>
-				Personal Details
-			</h2>
+	<div class="about-grid">
+		<!-- Personal details -->
+		<div class="about-card" appScrollReveal [revealDelay]="100">
+			<h3 class="card-title">
+				<span class="card-index">01</span>
+				Detalles personales
+			</h3>
 			<ul class="details-list">
 				<li>
-					<i class="fas fa-signature"></i>
-					<span class="detail-label">Name:</span>
+					<span class="detail-label">Nombre</span>
 					<span class="detail-value">Dayan Cabrera Corvo</span>
 				</li>
 				<li>
-					<i class="fas fa-briefcase"></i>
-					<span class="detail-label">Role:</span>
+					<span class="detail-label">Rol</span>
 					<span class="detail-value">Computer Science Student</span>
 				</li>
 				<li>
-					<i class="fas fa-envelope"></i>
-					<span class="detail-label">Email:</span>
-					<span class="detail-value">dayancorvo@gmail.com</span>
+					<span class="detail-label">Email</span>
+					<span class="detail-value">dayancorvo&#64;gmail.com</span>
 				</li>
 				<li>
-					<i class="fas fa-phone"></i>
-					<span class="detail-label">Phone:</span>
-					<span class="detail-value">+53-55801450</span>
+					<span class="detail-label">Teléfono</span>
+					<span class="detail-value">+53 55801450</span>
 				</li>
 				<li>
-					<i class="fab fa-github"></i>
-					<span class="detail-label">GitHub:</span>
-					<span class="detail-value">Dayan Cabrera2003</span>
+					<span class="detail-label">GitHub</span>
+					<span class="detail-value">DayanCabrera2003</span>
 				</li>
 			</ul>
 		</div>
 
-		<div class="column-divider"></div>
-
-		<!-- Columna Derecha: Key Expertise -->
-		<div class="about-column" appScrollReveal [revealDelay]="300">
-			<h2 class="column-title">
-				<i class="fas fa-code"></i>
-				Key Expertise
-			</h2>
-			<div class="expertise-item">
-				<h3 class="expertise-title">
-					<i class="fas fa-desktop"></i>
-					FRONTEND
-				</h3>
-				<p class="expertise-text">
-					Experiencia en aplicaciones enterprise usando Angular y frameworks progresivos como VueJS. Diseño de interfaces responsive con Bootstrap y TailwindCSS.
-				</p>
-			</div>
-			<div class="expertise-item">
-				<h3 class="expertise-title">
-					<i class="fas fa-server"></i>
-					BACKEND
-				</h3>
-				<p class="expertise-text">
-					Desarrollo robusto con Python (FastAPI) y C#. Fuerte base en Programación Concurrente y Arquitectura de Software.
-				</p>
-			</div>
-			<div class="expertise-item">
-				<h3 class="expertise-title">
-					<i class="fas fa-database"></i>
-					DATOS
-				</h3>
-				<p class="expertise-text">
-					Diseño de esquemas relacionales y optimización en SQL Server y PostgreSQL.
-				</p>
+		<!-- Key expertise -->
+		<div class="about-card" appScrollReveal [revealDelay]="200">
+			<h3 class="card-title">
+				<span class="card-index">02</span>
+				Áreas de enfoque
+			</h3>
+			<div class="expertise-list">
+				<div class="expertise-item">
+					<div class="expertise-head">
+						<i class="fas fa-desktop"></i>
+						<span>Frontend</span>
+					</div>
+					<p>
+						Angular y VueJS para aplicaciones enterprise. Interfaces responsive con
+						Bootstrap y TailwindCSS.
+					</p>
+				</div>
+				<div class="expertise-item">
+					<div class="expertise-head">
+						<i class="fas fa-server"></i>
+						<span>Backend</span>
+					</div>
+					<p>
+						Python (FastAPI) y C#. Programación concurrente y arquitectura limpia.
+					</p>
+				</div>
+				<div class="expertise-item">
+					<div class="expertise-head">
+						<i class="fas fa-database"></i>
+						<span>Datos</span>
+					</div>
+					<p>
+						Esquemas relacionales y optimización en SQL Server y PostgreSQL.
+					</p>
+				</div>
 			</div>
 		</div>
+
+		<!-- CTA card -->
+		<div class="about-card about-card--cta" appScrollReveal [revealDelay]="300">
+			<h3 class="card-title">
+				<span class="card-index">03</span>
+				¿Trabajamos juntos?
+			</h3>
+			<p class="cta-text">
+				Disponible para proyectos freelance, colaboraciones open-source y
+				oportunidades full-time remotas.
+			</p>
+			<a href="assets/Dayan_Cabrera_Corvo_CV.pdf" download="Dayan_Cabrera_Corvo_CV.pdf" class="cta-button">
+				<span>Descargar CV</span>
+				<i class="fas fa-arrow-down"></i>
+			</a>
+			<a href="mailto:dayancorvo@gmail.com" class="cta-link">
+				dayancorvo&#64;gmail.com
+				<i class="fas fa-arrow-right"></i>
+			</a>
+		</div>
 	</div>
-</div>
+</section>

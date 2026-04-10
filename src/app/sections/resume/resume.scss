@@ -1,486 +1,414 @@
+@use '../../core/constants/tokens' as *;
+
 .resume-section {
-    background: #F3EDD7;
-    min-height: 60vh;
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 40px 40px 60px 40px;
+  background: $paper;
+  position: relative;
+  width: 100%;
+  padding: clamp(80px, 10vw, 140px) $content-gutter clamp(60px, 8vw, 100px);
+  overflow: hidden;
 }
 
-.resume-main-title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    font-family: 'Inter', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    width: 100%;
-    max-width: 1400px;
-    padding-left: 0px;
+.resume-section::before {
+  content: 'resume';
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  font-family: $font-display;
+  font-style: italic;
+  font-size: clamp(6rem, 14vw, 14rem);
+  font-weight: 300;
+  color: rgba(154, 74, 36, 0.05);
+  line-height: 0.8;
+  pointer-events: none;
+  letter-spacing: -0.04em;
 }
 
-.resume-main-title i {
-    color: #8B7355;
-    font-size: 52px;
+// ------------ Header ------------
+.resume-header {
+  position: relative;
+  max-width: $content-max;
+  margin: 0 auto clamp(48px, 6vw, 80px);
 }
 
-.lottie-icon {
-    width: 140px;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-3;
+  font-family: $font-body;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $clay;
+  margin-bottom: $sp-4;
+
+  .eyebrow-dash {
+    width: 36px;
+    height: 1px;
+    background: $clay;
+  }
 }
 
+.section-title {
+  font-family: $font-display;
+  font-size: $fs-h1;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: $ink;
+  margin: 0;
+  max-width: 20ch;
+
+  em {
+    font-style: italic;
+    color: $clay;
+    font-weight: 400;
+  }
+}
+
+// ------------ Layout ------------
 .resume-content {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1400px;
+  position: relative;
+  max-width: $content-max;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.3fr 0.85fr;
+  gap: clamp(24px, 3vw, 48px);
+  align-items: start;
 }
 
 .resume-column {
-    flex: 1;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(4px);
-    border-radius: 12px;
-    border: 1px solid rgba(216, 203, 167, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: $sp-5;
 }
 
-.column-divider {
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(216, 203, 167, 0.5) 10%, rgba(216, 203, 167, 0.5) 90%, transparent);
-    min-height: 600px;
-    flex-shrink: 0;
+// Column header (shared)
+.column-header {
+  display: flex;
+  align-items: baseline;
+  gap: $sp-3;
+  padding-bottom: $sp-3;
+  border-bottom: 1px solid $paper-edge;
+  margin-bottom: $sp-3;
+}
+
+.column-index {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: $clay;
+  letter-spacing: -0.02em;
 }
 
 .column-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: 'Inter', sans-serif;
-    border-bottom: 1px solid rgba(216, 203, 167, 0.5);
+  font-family: $font-body;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $ink;
+  margin: 0;
 }
 
-.column-title i {
-    color: #8B7355;
-    font-size: 28px;
+// ------------ Education timeline ------------
+.timeline {
+  position: relative;
+  padding-left: $sp-5;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 0;
+    width: 1px;
+    background: $paper-edge;
+  }
 }
 
-/* EDUCACIÓN - Timeline */
 .timeline-item {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 30px;
+  position: relative;
 }
 
 .timeline-dot {
-    position: absolute;
-    left: 0;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    background: #8B7355;
-    border-radius: 50%;
-    border: 3px solid #F3EDD7;
-    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.3);
+  position: absolute;
+  left: -22px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: $paper;
+  border: 2px solid $clay;
 }
 
-.timeline-content {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 3px solid #8B7355;
+.timeline-period {
+  display: block;
+  font-family: $font-body;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $clay;
+  margin-bottom: $sp-2;
 }
 
 .institution {
-    font-size: 20px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-family: 'Inter', sans-serif;
+  font-family: $font-display;
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: $ink;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .department {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 6px;
-    font-style: italic;
+  font-family: $font-body;
+  font-size: 0.85rem;
+  color: $ink-mute;
+  font-style: italic;
+  margin: 0 0 6px 0;
 }
 
 .degree {
-    font-size: 17px;
-    font-weight: 600;
-    color: #8B7355;
-    margin-bottom: 10px;
+  font-family: $font-body;
+  font-size: 0.92rem;
+  color: $ink-soft;
+  font-weight: 500;
+  margin: 0;
 }
 
-.period {
-    font-size: 14px;
-    color: #666;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+// ------------ Projects ------------
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-4;
 }
 
-.period i {
-    color: #8B7355;
-}
-
-/* PROYECTOS */
 .project-item {
-    margin-bottom: 20px;
-    padding: 22px;
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(216, 203, 167, 0.3);
-    border-left: 3px solid #8B7355;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: $sp-5;
+  background: $card-bg;
+  backdrop-filter: blur($card-blur);
+  -webkit-backdrop-filter: blur($card-blur);
+  border: 1px solid $card-border;
+  border-radius: $r-md;
+  transition: transform $dur-base $ease-out, border-color $dur-base $ease-out, box-shadow $dur-base $ease-out;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 2px;
+    background: $clay;
+    border-radius: 0 2px 2px 0;
+    transition: top $dur-base $ease-out, bottom $dur-base $ease-out;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(154, 74, 36, 0.3);
+    box-shadow: $shadow-md;
+
+    &::before { top: 0; bottom: 0; }
+  }
 }
 
-.project-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(139, 115, 85, 0.18);
+.project-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: $sp-3;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
 }
 
 .project-title {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'Inter', sans-serif;
+  font-family: $font-display;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $ink;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
-.project-title i {
-    color: #8B7355;
-    font-size: 20px;
+.project-year {
+  font-family: $font-body;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $ink-mute;
+  flex-shrink: 0;
 }
 
 .project-tech {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 500;
-}
-
-.project-tech i {
-    color: #8B7355;
+  font-family: $font-body;
+  font-size: 0.78rem;
+  color: $clay;
+  margin: 0 0 $sp-3 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .project-highlights {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-.project-highlights li {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 6px;
-    padding-left: 20px;
+  li {
+    font-family: $font-body;
+    font-size: 0.88rem;
+    color: $ink-soft;
+    line-height: $lh-relaxed;
+    padding-left: 18px;
     position: relative;
+    margin-bottom: 4px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 8px;
+      height: 1px;
+      background: $clay;
+    }
+  }
 }
 
-.project-highlights li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #8B7355;
-    font-weight: bold;
-}
+// ------------ Skills ------------
+.skills-group {
+  margin-bottom: $sp-4;
 
-/* HABILIDADES */
-.skills-category {
-    margin-bottom: 25px;
+  &:last-child { margin-bottom: 0; }
 }
 
 .skills-subtitle {
-    font-size: 16px;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Inter', sans-serif;
-}
-
-.skills-subtitle i {
-    color: #8B7355;
-    font-size: 18px;
+  font-family: $font-body;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $ink-mute;
+  margin: 0 0 $sp-3 0;
 }
 
 .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .skill-tag {
-    display: inline-block;
-    padding: 8px 16px;
-    background: linear-gradient(135deg, #8B7355 0%, #A0826D 100%);
-    color: white;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: default;
-}
+  display: inline-block;
+  padding: 6px 12px;
+  background: transparent;
+  color: $ink;
+  border: 1px solid $paper-edge;
+  border-radius: $r-full;
+  font-family: $font-body;
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background $dur-fast $ease-out, color $dur-fast $ease-out, border-color $dur-fast $ease-out;
+  cursor: default;
 
-.skill-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(139, 115, 85, 0.3);
+  &:hover {
+    background: $ink;
+    color: $paper;
+    border-color: $ink;
+  }
 }
 
 .competencies-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-.competencies-list li {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
+  li {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    color: $ink-soft;
+    line-height: $lh-relaxed;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+    border-bottom: 1px dashed rgba(154, 74, 36, 0.12);
 
-.competencies-list li i {
-    color: #8B7355;
-    margin-top: 3px;
-    flex-shrink: 0;
+    &::before {
+      content: '+';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      color: $clay;
+      font-weight: 500;
+    }
+
+    &:last-child { border-bottom: none; }
+  }
 }
 
 .language-items {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .language-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 6px;
-    border-left: 3px solid #8B7355;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(154, 74, 36, 0.12);
+
+  &:last-child { border-bottom: none; }
 }
 
 .language-name {
-    font-size: 15px;
-    font-weight: 600;
-    color: #2c3e50;
+  font-family: $font-body;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: $ink;
 }
 
 .language-level {
-    font-size: 13px;
-    color: #666;
-    font-style: italic;
+  font-family: $font-display;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: $clay;
 }
 
-/* RESPONSIVE */
-// Large tablet: 2-column layout (education+experience top row, skills full width)
-@media (max-width: 992px) {
-    .resume-section {
-        padding: 30px 30px 50px 30px;
-    }
-
-    .resume-main-title {
-        font-size: 36px;
-        margin-bottom: 40px;
-        padding-left: 20px;
-    }
-
-    .resume-main-title i {
-        font-size: 40px;
-    }
-
-    .lottie-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .resume-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-    }
-
-    .column-divider {
-        display: none;
-    }
-
-    .resume-column {
-        padding: 20px;
-    }
-
-    // Skills column spans full width
-    .resume-column:last-child {
-        grid-column: 1 / -1;
-    }
-
-    .column-title {
-        font-size: 22px;
-    }
+// ------------ Responsive ------------
+@include bp-down($bp-lg) {
+  .resume-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .resume-column--main {
+    grid-column: 1 / -1;
+    order: 3;
+  }
 }
 
-// Small tablet: single column
-@media (max-width: 768px) {
-    .resume-content {
-        grid-template-columns: 1fr;
-    }
-
-    .resume-column:last-child {
-        grid-column: auto;
-    }
+@include bp-down($bp-md) {
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+  .resume-column--main { order: 2; }
+  .resume-column:last-child { order: 3; }
 }
 
-// Mobile
-@media (max-width: 576px) {
-    .resume-section {
-        padding: 30px 20px 40px 20px;
-    }
-
-    .resume-main-title {
-        font-size: 28px;
-        margin-bottom: 30px;
-        gap: 12px;
-        letter-spacing: 1px;
-        padding-left: 10px;
-    }
-
-    .resume-main-title i {
-        font-size: 32px;
-    }
-
-    .lottie-icon {
-        width: 45px;
-        height: 45px;
-    }
-
-    .resume-content {
-        gap: 20px;
-    }
-
-    .resume-column {
-        padding: 15px 5px;
-    }
-
-    .column-title {
-        font-size: 20px;
-        gap: 10px;
-    }
-
-    .column-title i {
-        font-size: 24px;
-    }
-
-    .timeline-item {
-        padding-left: 25px;
-    }
-
-    .timeline-dot {
-        width: 12px;
-        height: 12px;
-    }
-
-    .timeline-content {
-        padding: 15px;
-    }
-
-    .institution {
-        font-size: 18px;
-    }
-
-    .department {
-        font-size: 14px;
-    }
-
-    .degree {
-        font-size: 15px;
-    }
-
-    .period {
-        font-size: 13px;
-    }
-
-    .project-item {
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-
-    .project-title {
-        font-size: 16px;
-        gap: 8px;
-    }
-
-    .project-title i {
-        font-size: 18px;
-    }
-
-    .project-tech {
-        font-size: 12px;
-    }
-
-    .project-highlights li {
-        font-size: 13px;
-    }
-
-    .skills-subtitle {
-        font-size: 15px;
-        gap: 6px;
-    }
-
-    .skills-subtitle i {
-        font-size: 16px;
-    }
-
-    .skill-tag {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-
-    .competencies-list li {
-        font-size: 13px;
-    }
-
-    .language-item {
-        padding: 8px 12px;
-    }
-
-    .language-name {
-        font-size: 14px;
-    }
-
-    .language-level {
-        font-size: 12px;
-    }
+@include bp-down($bp-sm) {
+  .project-item { padding: $sp-4; }
+  .project-title { font-size: 1.05rem; }
+  .institution { font-size: 1.15rem; }
+  .resume-section::before {
+    font-size: 5rem;
+    top: 30px;
+  }
 }
