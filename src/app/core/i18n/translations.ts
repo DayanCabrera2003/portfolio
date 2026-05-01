@@ -59,7 +59,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'resume.col1.title':   'Education',
     'resume.edu.period':   '2022 — Present',
     'resume.edu.institution': 'University of Havana',
-    'resume.edu.department':  'Faculty of Mathematics and Computer Science',
+    'resume.edu.department':  'Faculty of Mathematics and Computing',
     'resume.edu.degree':   "Bachelor's in Computer Science",
 
     'resume.col2.index':   'Wk',
